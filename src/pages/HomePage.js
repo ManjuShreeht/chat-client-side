@@ -140,7 +140,7 @@ const Homepage = () => {
             AI SCIFI Images
           </Typography>
           <Card
-            onClick={() => navigate("scifi-image")}
+            onClick={() => navigate("/scifi-image")}
             sx={{
               boxShadow: 2,
               borderRadius: 5,
