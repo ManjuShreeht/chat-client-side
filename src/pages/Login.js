@@ -27,7 +27,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("user/login", { email, password });
+      await axios.post("api/user/login", { email, password });
       toast.success("Login Successfully");
       localStorage.setItem("authToken", true);
       navigate("/");

@@ -27,7 +27,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("user/register", { username, email, password });
+      await axios.post("api/user/register", { username, email, password });
       toast.success("User Register Successfully");
       navigate("/login");
     } catch (err) {
