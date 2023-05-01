@@ -28,7 +28,7 @@ const JsConverter = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("user/openai/js-converter", {
+      const { data } = await axios.post("https://chat-5n1h.onrender.com/api/user/openai/js-converter", {
         text,
       });
       console.log(data);
@@ -85,7 +85,7 @@ const JsConverter = () => {
           Convert
         </Button>
         <Typography mt={2}>
-          not this tool ? <Link to="/">GO BACK</Link>
+          not this tool ? <Link to="/home">GO BACK</Link>
         </Typography>
       </form>
 

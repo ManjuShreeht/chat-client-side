@@ -28,7 +28,7 @@ const ScifiImage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("user/openai/scifiImage", { text });
+      const { data } = await axios.post("https://chat-5n1h.onrender.com/api/user/openai/scifiImage", { text });
       console.log(data);
       setImage(data);
     } catch (err) {
@@ -83,7 +83,7 @@ const ScifiImage = () => {
           Submit
         </Button>
         <Typography mt={2}>
-          not this tool ? <Link to="/">GO BACK</Link>
+          not this tool ? <Link to="/home">GO BACK</Link>
         </Typography>
       </form>
 

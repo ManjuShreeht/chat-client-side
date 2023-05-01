@@ -28,7 +28,7 @@ const Paragraph = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("user/openai/paragraph", { text });
+      const { data } = await axios.post("https://chat-5n1h.onrender.com/api/user/openai/paragraph", { text });
       console.log(data);
       setPara(data);
     } catch (err) {
@@ -83,7 +83,7 @@ const Paragraph = () => {
           Generate
         </Button>
         <Typography mt={2}>
-          not this tool ? <Link to="/">GO BACK</Link>
+          not this tool ? <Link to="/home">GO BACK</Link>
         </Typography>
       </form>
 

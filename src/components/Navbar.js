@@ -12,7 +12,7 @@ function Navbar() {
   const loggedIn = JSON.parse(localStorage.getItem("authToken"));
   const handleLogout = async () => {
     try {
-      await axios.post("user/logout");
+      await axios.post("https://chat-5n1h.onrender.com/api/user/logout");
       localStorage.removeItem("authToken");
       toast.success("logout successfully ");
       navigate("/login");
@@ -33,7 +33,7 @@ function Navbar() {
       </Typography>
       {loggedIn ? (
         <>
-          <NavLink to="/" p={1}>
+          <NavLink to="/home" p={1}>
             Home
           </NavLink>
           <NavLink to="/login" onClick={handleLogout} p={1}>

@@ -28,7 +28,7 @@ const ChatBot = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("user/openai/chatbot", { text });
+      const { data } = await axios.post("https://chat-5n1h.onrender.com/api/user/openai/chatbot", { text });
       console.log(data);
       setResponse(data);
     } catch (err) {
@@ -83,7 +83,7 @@ const ChatBot = () => {
           Chat
         </Button>
         <Typography mt={2}>
-          not this tool ? <Link to="/">GO BACK</Link>
+          not this tool ? <Link to="/home">GO BACK</Link>
         </Typography>
       </form>
 

@@ -27,10 +27,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/ahttps://chat-5n1h.onrender.com/api/user/login", { email, password });
+      await axios.post("https://chat-5n1h.onrender.com/api/user/login", { email, password });
       toast.success("Login Successfully");
       localStorage.setItem("authToken", true);
-      navigate("/");
+      navigate("/home");
     } catch (err) {
       console.log(error);
       if (err.response.data.error) {
